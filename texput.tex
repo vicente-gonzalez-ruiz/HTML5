@@ -1,0 +1,294 @@
+\title{\href{http://www.w3.org/html/}{HTML}}
+
+\maketitle
+\tableofcontents
+
+\lstset{inputencoding=utf8/latin1,language=HTML,basicstyle=\footnotesize\ttfamily}
+
+\newcommand{\htmloutput}[1]{%
+\lstinputlisting{#1.html}%
+\ifx \HCode\Undfef%
+\else%
+\HCode{%
+  <iframe src="#1.html">%
+  </iframe>%
+}%
+\fi%
+}
+
+% http://beej.us/blog/data/html5-canvas/
+% http://beej.us/blog/data/html5s-canvas-2-pixel/
+
+\chapter{Introduction}
+%{{{
+
+\section{\href{http://en.wikipedia.org/wiki/HTML}{HTML (HyperText Markup Language)}}
+%{{{  
+
+\begin{itemize}
+\item HyperText Markup Language is the standard
+  \href{http://en.wikipedia.org/wiki/Markup_language}{markup language}
+  used to create Web pages.
+\item Web browsers read HTML files and compose them into visible
+  or audible Web pages.
+\item It was created mainly by the physicist
+  \href{http://en.wikipedia.org/wiki/Tim_Berners-Lee}{Tim Berners-Lee}
+  at \href{http://en.wikipedia.org/wiki/CERN}{CERN} in the 80, which
+  also wrote the first HTML interpreter (Web browser) and the first
+  HTTP server (\href{http://en.wikipedia.org/wiki/CERN_httpd}{\tt CERN
+    httpd}) for the
+  \href{http://en.wikipedia.org/wiki/NeXT_Computer}{NeXT Computer}.
+\item The first Web page was hosted by \url{http://info.cern.ch} in
+  1992.
+\end{itemize}
+
+%}}}
+
+\section{\href{http://en.wikipedia.org/wiki/XHTML}{XHTML (Extensible HTML)}}
+%{{{
+
+\begin{itemize}
+
+\item XHTML is a reformulation of HTML in XML syntax. Example:
+\begin{lstlisting}
+<img src="funfun.jpg"/> <!-- This is XHTML -->
+<img src="funfun.jpg">  <!-- This is HTML  -->
+\end{lstlisting}
+
+\item XHTML pages can be parsed using standard XML parsers.
+
+\item HTML documents should be server with a
+\begin{lstlisting}
+Content-Type: text/html
+\end{lstlisting}
+MIME type HTTP line header.
+
+\item XHTML documents with a
+\begin{lstlisting}
+Content-Type: text/xhtml+xml
+\end{lstlisting}
+or
+\begin{lstlisting}
+Content-Type: text/xml
+\end{lstlisting}
+
+\end{itemize}
+
+%}}}
+
+\section{\href{http://en.wikipedia.org/wiki/XML}{XML (Extensible Markup Language)}}
+%{{{
+
+\begin{itemize}
+\item Defines a set of rules for encoding documents in a format which
+  is both human-readable and machine-readable.
+\end{itemize}
+
+%}}}
+
+\section{\href{http://en.wikipedia.org/wiki/Cascading_Style_Sheets}{CSS (Cascading Style Sheets)}}
+%{{{
+\begin{itemize}
+\item It is designed primary to separate the document content from its
+  presentation (layout, colors, fonts, etc.).
+\item Define the look and layout of text and other material of the Web
+  pages (in general of any markup language).
+\end{itemize}
+%}}}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/html/html_head.asp}{Structure of a Web page}}
+%{{{
+
+\htmloutput{structure}
+
+%}}}
+
+\chapter{Using CSS}
+%{{{ 
+\section{Inline styling}
+\htmloutput{inline-css}
+
+\section{\href{internal-css.html}{Internal styling}}
+\htmloutput{internal-css}
+
+\section{\href{externla-css}{External styling}}
+\lstinputlisting{external-css.css}
+\htmloutput{external-css}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/html/html_headings.asp}{Headings}}
+%{{{
+
+\htmloutput{headings}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/html/html_links.asp}{URL links}}
+%{{{
+
+\htmloutput{URL-links}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/tags/tag_hr.asp}{Horizontal rules}}
+%{{{
+
+\htmloutput{horizontal-rule}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/tags/tag_pre.asp}{Indented text}}
+%{{{
+
+\htmloutput{indented-text}
+
+%}}}
+
+\chapter{Colorizing}
+%{{{
+
+\begin{itemize}
+\item \href{http://www.w3schools.com/html/html_colornames.asp}{HTML
+    color names}.
+\item \href{http://www.w3schools.com/html/html_colorvalues.asp}{HTML
+    color values}.
+\item \href{http://www.w3schools.com/html/html_colors.asp}{HTML
+    color shades}.
+\end{itemize}
+
+\htmloutput{using-color}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/cssref/css_websafe_fonts.asp}{Font selection}}
+%{{{
+
+\htmloutput{font-selection}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/html/html5_browsers.asp}{Creating new elements}}
+%{{{
+
+\htmloutput{creating-elements}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/charsets/ref_html_8859.aspl}{Writting in Spanish}}
+%{{{
+
+\htmloutput{spanish}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/tags/att_font_size.asp}{Font size}}
+%{{{
+
+\htmloutput{font-size}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/cssref/pr_text_text-align.asp}{Text alignment}}
+%{{{
+
+\htmloutput{text-alignment}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/html/html_formatting.asp}{Text style}}
+%{{{
+
+\htmloutput{text-style}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/tags/tag_br.asp}{Line breaks}}
+%{{{
+
+\htmloutput{line-break}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/html/html_tables.asp}{Creating tables}}
+%{{{
+
+\htmloutput{table}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/html/html_iframe.asp}{Inserting Web pages}}
+%{{{
+
+\htmloutput{iframe}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/tags/tag_audio.asp}{Playing audio}}
+%{{{
+
+\htmloutput{audio}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/tags/tag_video.asp}{Playing video}}
+%{{{
+
+\htmloutput{video}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/tags/tag_img.asp}{Displaying images}}
+%{{{
+
+\htmloutput{images}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/tags/tag_figure.asp}{Inserting figures}}
+%{{{
+
+\htmloutput{figures}
+
+%}}}
+
+\chapter{\href{http://www.w3schools.com/html/html_scripts.asp}{Using JavaScript}}
+%{{{
+
+\begin{itemize}
+\item Useful to create ``live'' Web pages.
+\item \href{http://www.w3schools.com/js}{A tutorial}.
+\end{itemize}
+
+\section{\href{http://www.w3schools.com/tags/tag_button.asp}{Creating Buttons}}
+%{{{
+
+\htmloutput{button}
+
+%}}}
+
+\section{\href{http://www.w3schools.com/tags/tag_canvas.asp}{Drawing figures}}
+%{{{
+
+\htmloutput{filled-rectangle}
+
+%}}}
+
+\section{\href{A more complex JavaScript demo}{contrast-sensitivity-image.html}: \href{http://en.wikipedia.org/wiki/Contrast_(vision)}{The Contrast Sensitivity Function (Campbell and Robson CSF test chart)}}
+%{{{
+
+\lstinputlisting{contrast-sensitivity-image.html}%
+\ifx \HCode\Undfef%
+\else%
+\HCode{
+  <iframe width="800" height="600" src="contrast-sensitivity-image.html">%
+  </iframe>
+}
+\fi
+
+%}}}
+
+%}}}
+
